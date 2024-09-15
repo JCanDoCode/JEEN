@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeen</title>
+    <link rel="stylesheet" href="menu_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Josel Canlas -->
+
+    <div class="sidebar">
+        <div class="exit">
+            <i class='bx bx-x sidebar-exit'></i>
+        </div>
+        <div class="sidebar-container">
+            <h1>Reservation</h1>
+            <div class="forms">
+                <div class="form-field">
+                    <h3>Name:</h3>
+                    <input placeholder="Your Name" type="text">
+                </div>
+                <div class="form-field">
+                    <h3>Email:</h3>
+                    <input placeholder="Your Email" type="text">
+                </div>
+                <div class="form-field">
+                    <h3>Phone Number:</h3>
+                    <input placeholder="Your Phone #" type="text">
+                </div>
+                <div class="form-field">
+                    <h3>Date:</h3>
+                    <input type="date">
+                </div>
+                <div class="form-field">
+                    <h3>Time:</h3>
+                    <input type="time">
+                </div>
+                <div class="form-field">
+                    <h3>Party Size:</h3>
+                    <select name="" id="">
+                        <option value="1">1 Person</option>
+                        <option value="2">2 Person</option>
+                        <option value="3">3 Person</option>
+                        <option value="4">4 Person</option>
+                        <option value="5">5 Person</option>
+                        <option value="6">6 Person</option>
+                        <option value="6+">6+ Person</option>
+                    </select>
+                </div>
+            </div>
+            <input id="submit" type="submit">
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <div id="logo">
+                    <img src="./images/Jeen-Logo.png" alt="">
+                </div>
+                <div class="menu">
+                    <ul class="menu-list">      
+                        <li>
+                            <a href="./index.html" class="nav-links">Home</a>
+                        </li>
+                        <li>
+                            <a href="./about.html" class="nav-links">About</a>
+                        </li>
+                        <li>
+                            <a href="./menu.html" class="nav-links">Menu</a>
+                        </li>
+                        <li>
+                            <a href="./contactus.html" class="nav-links">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-burger">
+                    <h1 class="the-r">R</h1>
+                    <div id="burger">
+                        <div class="lines"></div>
+                        <div class="lines"></div>
+                        <div class="lines"></div>
+                        <div class="lines"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="menu"> 
+        <h1>Menu</h1>
+        <p class="menu-description">Whether you're craving a juicy burger, a perfectly cooked steak, or a hearty vegan option, our menu has something for every palate. Bon appétit!</p>
+        
+        <div class="sides"><h2>Sides/Appetizers</h2></div>
+        
+        <div class="item-container">
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>Side Bread</h3>
+                    <div class="price-underline">
+                        <p class="price">12</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    Artisan crafted bread served with freshly made garlic butter compound.
+                </span>
+            </div>
+            <div class="item2">
+                <div class="item-heading">
+                    <h3>Olives</h3>
+                    <div class="price-underline">
+                        <p class="price">9</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    A medley of marinated olives for the perfect start.
+                </span>
+            </div>
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>House Soup</h3>
+                    <div class="price-underline">
+                        <p class="price2">12/16</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    Daily house-made soup. Can be ordered as a small or large. Ask waiter for more details.
+                </span>
+            </div>
+            <div class="item2">
+                <div class="item-heading">
+                    <h3>Wings</h3>
+                    <div class="price-underline">
+                        <p class="price">18</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    Your choice of salt and pepper, buffalo, or bbq flavours.
+                </span>
+            </div>
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>Caesar<br>Salad</h3>
+                    <div class="price-underline">
+                        <p class="price2">9/14</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    Made in-house and served with anchovies and garlic chips
+                </span>
+            </div>
+            <div class="item2">
+                <div class="item-heading">
+                    <h3>Quinoa<br>Bowl</h3>
+                    <div class="price-underline">
+                        <p class="price">15</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    A hearty mix of quinoa, fresh vegetables, and a zesty vinaigrette.
+                </span>
+            </div>
+        </div>
+
+        <div class="mains"><h2>Mains</h2></div>
+
+        <div class="item-container">
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>JEEN Burger</h3>
+                    <div class="price-underline">
+                        <p class="price">25</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    Our signature burger with a succulent patty, melted cheese, crisp lettuce, and special sauce. Served with seasoned fries.
+                </span>
+            </div>
+            <div class="item2">
+                <div class="item-heading">
+                    <h3>Steak Perfection</h3>
+                    <div class="price-underline">
+                        <p class="price">45</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    Juicy and perfectly grilled 8oz steak cooked to your liking. Accompanied by your choice of sides.
+                </span>
+            </div>
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>Truffle-infused Risotto</h3>
+                    <div class="price-underline">
+                        <p class="price2">30</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    Creamy Arborio rice cooked to perfection with a touch of truffle essence.
+                </span>
+            </div>
+            <div class="item2">
+                <div class="item-heading">
+                    <h3>Pan-Seared Salmon</h3>
+                    <div class="price-underline">
+                        <p class="price">27</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    Fresh salmon fillet served with a citrus-infused sauce.
+                </span>
+            </div>
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>Margherita Pizza</h3>
+                    <div class="price-underline">
+                        <p class="price2">20</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    Classic tomato, mozzarella, and basil on a thin, crispy crust.
+                </span>
+            </div>
+            <div class="item2">
+                <div class="item-heading">
+                    <h3>CBLT</h3>
+                    <div class="price-underline">
+                        <p class="price">18</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    Tender chicken, bacon, lettuce and tomato in between two pieces of sour dough bread that have been caressed with a light layer of mayo.
+                </span>
+            </div>
+        </div>
+
+        <div class="desserts"><h2>Desserts</h2></div>
+
+        <div class="item-container">
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>Triple Chocolate Decadence Cake</h3>
+                    <div class="price-underline">
+                        <p class="price">20</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    Indulge in layers of rich dark chocolate cake, white chocolate mousse, and milk chocolate ganache. Served with a scoop of vanilla bean ice cream and drizzled with raspberry coulis.
+                </span>
+            </div>
+            <div class="item2">
+                <div class="item-heading">
+                    <h3>Salted Caramel Pecan Pie</h3>
+                    <div class="price-underline">
+                        <p class="price">15</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    A classic pecan pie with a modern twist. The buttery crust is filled with a luscious mixture of pecans and a generous layer of salted caramel. Topped with a dollop of whipped cream and a sprinkle of sea salt.
+                </span>
+            </div>
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>Mango Tango Sorbet</h3>
+                    <div class="price-underline">
+                        <p class="price2">8</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    A tropical delight featuring smooth and tangy mango sorbet served in a chilled pineapple boat. Topped with diced kiwi, strawberries, and a drizzle of passion fruit sauce.
+                </span>
+            </div>
+            <div class="item2">
+                <div class="item-heading">
+                    <h3>Matcha Green Tea Tiramisu</h3>
+                    <div class="price-underline">
+                        <p class="price">20</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    An Asian-inspired twist on the classic Italian dessert. Layers of matcha-infused ladyfingers and mascarpone cream, garnished with a dusting of matcha powder and edible flowers.
+                </span>
+            </div>
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>Warm Apple Cinnamon Empanadas</h3>
+                    <div class="price-underline">
+                        <p class="price2">21</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    Flaky pastry pockets filled with warm cinnamon-spiced apples. Served with a scoop of cinnamon ice cream and a drizzle of caramel sauce.
+                </span>
+            </div>
+            <div class="item2">
+                <div class="item-heading">
+                    <h3>Chocolate Lava Affair</h3>
+                    <div class="price-underline">
+                        <p class="price">25</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+                <span class="description">
+                    A chocolate lover's dream! A decadent chocolate lava cake with a gooey, molten center. Served with a scoop of velvety chocolate ice cream and dusted with powdered sugar.
+                </span>
+            </div>
+        </div>
+
+
+
+
+        <h1>Drinks</h1>
+        <p class="menu-description">Cocktail Creations at JEEN.</p>
+        <div class="reds"><h2>Reds</h2></div>
+
+        <div class="item-container">
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>Merlot</h3>
+                    <div class="price-underline">
+                        <p class="price">12</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="item-heading">
+                    <h3>Cabernet Sauvignon</h3>
+                    <div class="price-underline">
+                        <p class="price">9</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>Pinot Noir</h3>
+                    <div class="price-underline">
+                        <p class="price">12</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-none2">
+                <div class="item-heading">
+                    <h3>Olives</h3>
+                    <div class="price-underline">
+                        <p class="price">9</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-none1">
+                <div class="item-heading">
+                    <h3>Olives</h3>
+                    <div class="price-underline">
+                        <p class="price">9</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-none2">
+                <div class="item-heading">
+                    <h3>Olives</h3>
+                    <div class="price-underline">
+                        <p class="price">9</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="whites"><h2>Whites</h2></div>
+        <div class="item-container">
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>Chardonnay</h3>
+                    <div class="price-underline">
+                        <p class="price">12</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="item-heading">
+                    <h3>Sauvignon Blanc</h3>
+                    <div class="price-underline">
+                        <p class="price">9</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>Pinot Grigio</h3>
+                    <div class="price-underline">
+                        <p class="price">12</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="item-heading">
+                    <h3>Prosecco</h3>
+                    <div class="price-underline">
+                        <p class="price">9</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-none1">
+                <div class="item-heading">
+                    <h3>Olives</h3>
+                    <div class="price-underline">
+                        <p class="price">9</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-none2">
+                <div class="item-heading">
+                    <h3>Olives</h3>
+                    <div class="price-underline">
+                        <p class="price">9</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="martinis-cocktails"><h2>Martinis and Cocktails</h2></div>
+        <div class="item-container">
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>Classic Martini</h3>
+                    <div class="price-underline">
+                        <p class="price">12</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="item-heading">
+                    <h3>Raspberry Lemon Twist</h3>
+                    <div class="price-underline">
+                        <p class="price">9</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>Cucumber Mint Bliss</h3>
+                    <div class="price-underline">
+                        <p class="price">12</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="item-heading">
+                    <h3>Espresso Martini</h3>
+                    <div class="price-underline">
+                        <p class="price">9</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>Jeen G&T</h3>
+                    <div class="price-underline">
+                        <p class="price">9</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="item-heading">
+                    <h3>Timeless Old Fashioned</h3>
+                    <div class="price-underline">
+                        <p class="price">9</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="refreshing-sips"><h2>Refreshing Sips</h2></div>
+        <div class="item-container">
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>Ginger Ale Fizz</h3>
+                    <div class="price-underline">
+                        <p class="price">12</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="item-heading">
+                    <h3>Iced Tea Infusion</h3>
+                    <div class="price-underline">
+                        <p class="price">9</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item1">
+                <div class="item-heading">
+                    <h3>JEEN Cola</h3>
+                    <div class="price-underline">
+                        <p class="price">12</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-none2">
+                <div class="item-heading">
+                    <h3>Espresso Martini</h3>
+                    <div class="price-underline">
+                        <p class="price">9</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-none1">
+                <div class="item-heading">
+                    <h3>Jeen G&T (Gin & Tonic)</h3>
+                    <div class="price-underline">
+                        <p class="price">9</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-none2">
+                <div class="item-heading">
+                    <h3>Timeless Old Fashioned</h3>
+                    <div class="price-underline">
+                        <p class="price">9</p>
+                        <div class="price-line1"></div>
+                        <div class="price-line2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <footer>
+        <div class="footer-text">
+            <div class="image">
+                <img src="./images/Jeen-Logo.png" alt="">
+            </div>
+
+            <div class="texts">
+                <h2>Jeen Restaurant, 123 Main Street Vancouver, BC</h2>
+                <h2>V6A 1A1, (749) 194-1230, reservation@jeen.ca</h2>
+                <h2>Open: 09:00 am - 11:00 pm</h2>
+            </div>
+            <ul class="footer-lists">
+                <li>
+                    <a href="#" class="lists">Facebook</a>
+                </li>
+                <li>
+                    <a href="#" class="lists">Instagram</a>
+                </li>
+                <li>
+                    <a href="#" class="lists">Twitter</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="box-lines">
+            <div class="container-lines"></div>
+            <div class="container-lines"></div>
+        </div>
+    </footer> -->
+
+    <script>
+        const exitButton = document.querySelector(".sidebar-exit"),
+              openButton = document.querySelector("#burger"),
+              sidebar = document.querySelector(".sidebar");
+
+        exitButton.addEventListener("click", () => {
+            sidebar.classList.remove("open");
+            sidebar.classList.toggle("close");
+        })
+
+        openButton.addEventListener("click", () => {
+            sidebar.classList.remove("close");
+            sidebar.classList.toggle("open");
+        })
+    </script>
+    <div class="footer"></div>
+</body>
+</html>

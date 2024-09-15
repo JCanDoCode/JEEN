@@ -1,0 +1,813 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+html {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 62.5%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+}
+
+:root {
+
+    /* Color Pallete */
+    --color-1: #08172e;
+    --color-2: #15253f;
+    --color-3: #283d5b;
+    --color-4: #bd9060;
+    --color-5: #cc7d51;
+
+    /* Fonts */
+    --playfair: "Playfair Display", serif;
+    --montserrat: "Montserrat", sans-serif;
+}
+
+/* NEWS LETTER POPUP */
+
+
+.newsletter {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter.close {
+    display: none;
+}
+
+.newsletter .container {
+    width: 75%;
+    height: 80%;
+    background: rgb(0, 0, 0);
+    background-image: url(./images/ambitious-studio-rick-barrett-UoTlkEmUDMQ-unsplash.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: -2;
+    animation: goUp 2s ease;
+}
+
+@keyframes goUp {
+    from {
+        transform: translateY(100vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.newsletter .container::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    z-index: -1;
+}
+
+.newsletter .exit-button {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    left: 0;
+    top: 0;
+}
+
+.newsletter .exit-button .bx-x {
+    font-size: 6vmin;
+    color: white;
+    font-weight: 100;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.newsletter .exit-button .bx-x:hover {
+    color: #a4a4a4;
+}
+
+.newsletter .newsletter-container {
+    width: 400px;
+    height: 600px;
+    /* background-color: #cc7d51; */
+    padding: 25px 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: var(--montserrat);
+    transform: translateY(-3vmin);
+
+}
+
+.newsletter .newsletter-container img {
+    width: 20vmin;
+    /* transform: translateY(-3vmin); */
+}
+
+.newsletter .newsletter-container h2 {
+    font-weight: 250;
+    margin-bottom: 20px;
+}
+
+.newsletter .newsletter-container h1 {
+    text-align: center;
+    font-size: 3.2vmin;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.newsletter .newsletter-container form {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.newsletter .newsletter-container h5 {
+    margin-bottom: 5px;
+}
+
+.newsletter .newsletter-container input {
+    width: 100%;
+    height: 50px;
+    font-family: var(--montserrat);
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    border: 1px solid;
+    box-shadow: 0 0 10px black;
+    transform: all 0.5s ease;
+}
+
+.newsletter .newsletter-container input:nth-child(3) {
+    background-color: var(--color-4);
+}
+
+.newsletter .newsletter-container input:nth-child(3):hover {
+    background-color: #97734d;
+}
+
+.newsletter .newsletter-footer {
+    width: 100%;
+    height: 8vmin;
+    padding: 25px 20px;
+    text-align: center;
+    font-family: var(--montserrat);
+    color: white;
+    margin-bottom: 10px;
+    font-size: 1.23vmin;
+}
+
+/* END OF NEWS LETTER POPUP */
+
+/* SHOPPING BAG */
+
+.shopping-bag {
+    position: fixed;
+    left: 92vw;
+    top: 85vh;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background-color: var(--color-2);
+    filter: drop-shadow(0.5rem 0.5rem 0.75rem black);
+    transition: all 0.5s ease;
+    z-index: 10;
+
+    &:hover {
+        transform: translateY(-1rem);
+    }
+}
+
+.bx-shopping-bag {
+    font-size: 7rem;
+    color: var(--color-4);
+}
+
+/* END OF SHOPPING BAG */
+
+/* SIDE BAR */
+
+.sidebar {
+    position: fixed;                                                                            
+    width: 40vw;
+    height: 100vh;
+    background-image: url(./images/ambitious-studio-rick-barrett-QjUY7auDzUQ-unsplash.png);
+    background-size: cover;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease;
+    transform: translateX(40vw);
+}
+
+.sidebar::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    z-index: -1;
+}
+
+.sidebar.close {
+    transform: translateX(40vw)
+}
+
+.sidebar.open {
+    transform: translateX(0px)
+}
+
+.sidebar .exit {
+    color: white;
+    width: 100%;
+    height: 9rem;
+    padding-right: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.sidebar .exit i {
+    font-size: 6vmin;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.sidebar .exit i:hover {
+    color: #aaaaaa;
+}
+
+.sidebar .sidebar-container {
+    width: 80%;
+    height: 80%;
+    background-color: rgba(14, 14, 14, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 2.5rem 2rem;
+    font-family: var(--montserrat);
+    border-radius: 2rem;
+    justify-content: space-around;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    &.sidebar-container::-webkit-scrollbar {
+        width: 1rem;
+    }
+    &.sidebar-container::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5rem;
+    }
+    &.sidebar-container::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+}
+
+.sidebar .sidebar-container h1 {
+    color: var(--color-4);
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.sidebar .forms {
+    width: 100%;
+    height: auto;
+}
+
+.sidebar .form-field {
+    width: 100%;
+    height: 4rem;
+    margin: 4.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 1043px) {
+        flex-direction: column;
+    }
+}
+
+.sidebar .form-field h3 {
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+.sidebar .form-field input {
+    height: 100%;
+    padding: 1rem;
+    font-family: var(--montserrat);
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.sidebar .form-field select {
+    height: 100%;
+    padding: 1rem;
+    font-family: var(--montserrat);
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.sidebar #submit {
+    width: 100%;
+    min-height: 8rem;
+    font-family: var(--montserrat);
+    background-color: var(--color-4);
+    border: none;
+    border-radius: 1rem;
+    font-size: 2rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.sidebar #submit:hover {
+    background-color: #806446;
+}
+
+@media all and (max-width:760px){
+    .sidebar {
+        position: fixed;                                                                            
+        width: 50vw;
+        height: 100vh;
+        background-image: url(./images/ambitious-studio-rick-barrett-QjUY7auDzUQ-unsplash.png);
+        background-size: cover;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 1s ease;
+        transform: translateX(75vw);
+    }
+
+    .sidebar.close {
+        transform: translateX(50vw)
+    }
+
+    .sidebar.open {
+        transform: translateX(0px)
+    }
+}
+
+@media all and (max-width: 575px){
+    .sidebar {
+        position: fixed;                                                                            
+        width: 60vw;
+        height: 100vh;
+        background-image: url(./images/ambitious-studio-rick-barrett-QjUY7auDzUQ-unsplash.png);
+        background-size: cover;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 1s ease;
+        transform: translateX(75vw);
+    }
+
+    .sidebar.close {
+        transform: translateX(60vw)
+    }
+
+    .sidebar.open {
+        transform: translateX(0px)
+    }
+}
+
+@media all and (max-width: 480px) {
+    .sidebar {
+        position: fixed;                                                                            
+        width: 75vw;
+        height: 100vh;
+        background-image: url(./images/ambitious-studio-rick-barrett-QjUY7auDzUQ-unsplash.png);
+        background-size: cover;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 1s ease;
+        transform: translateX(75vw);
+    }
+
+    .sidebar.close {
+        transform: translateX(75vw)
+    }
+
+    .sidebar.open {
+        transform: translateX(0px)
+    }
+}
+
+/* END OF SIDE BAR */
+
+
+
+
+
+
+
+
+/* ------------------- START OF HEADER ------------------- */
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/Jeen-header-image.png);
+    background-size: cover;
+}
+
+
+
+/* Navigation Bar */
+
+header nav {
+    width: 100%;
+    height: 14vmin;
+    font-family: var(--playfair);
+    z-index: 999;
+}
+
+header .nav-bar {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8,23,46,0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #logo {
+    width: 24vmin;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header #logo img {
+    width: 100%;
+    z-index: 999;
+}   
+
+header .menu {
+    width: 92.5vmin;
+    height: 100%;
+    z-index: 1;
+}
+
+header .menu-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-size: 2.4rem;
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
+    @media (max-width: 375px) {
+        font-size: 1.8rem;
+    }
+}
+
+header .menu-list .nav-links {
+    color: white;
+    text-decoration: none;
+    padding: 0.4rem 0.4rem;
+    position: relative;
+
+    
+}
+
+@media (max-width: 575px) {
+    .menu-list li:nth-of-type(1) {
+        display: none;
+    }
+}
+
+header .menu-list .nav-links::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    left: 0.05rem;
+    bottom: -0.1rem; 
+    border-bottom: 0.1rem solid var(--color-4);
+    transition: all 0.5s ease;
+}
+
+header .menu-list .nav-links:hover::before {
+    width: 100%;
+}
+
+header .menu-list .nav-links::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    left: 0.05rem;
+    bottom: -0.6rem; 
+    border-bottom: 0.1rem solid var(--color-4);
+    transition: all 0.5s 0.1s ease;
+}
+
+header .menu-list .nav-links:hover::after {
+    width: 100%;
+}
+
+header .menu-burger {
+    width: 24vmin;
+    height: 100%;
+    /* background-color: var(--color-3); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+header .menu-burger .the-r {
+    position: absolute;
+    color: var(--color-4);
+    font-weight: 100;
+    font-size: 12vmin;
+    opacity: 0.25;
+    transform: translateY(-0.5rem);
+}
+
+header #burger {
+    position: relative;
+    width: 9vmin;
+    height: 7vmin;
+    cursor: pointer;
+    transform: translateX(-0.5rem) scale(.80);
+}
+
+header .lines {
+    position: absolute;
+    border: 0.2rem solid var(--color-4);
+    width: 70%;
+    transition: left 0.5s ease; 
+    left: 0;
+
+    @media (max-width: 575px) {
+        border: 0.1rem solid var(--color-4);
+    }
+}
+
+
+header .lines:nth-child(odd) {
+    left: 30%;
+}
+
+header .lines:nth-child(even) {
+    left: 0%;
+}
+
+header #burger:hover .lines:nth-child(odd) {
+    left: 0%;
+}
+
+header #burger:hover .lines:nth-child(even) {
+    left: 30%;
+}
+
+
+header .lines:nth-child(1) {
+    top: 10%;
+}
+
+header .lines:nth-child(2) {
+    top: 36%;
+}
+
+header .lines:nth-child(3) {
+    top: 64%;
+}
+header .lines:nth-child(4) {
+    top: 90%;
+}
+
+/* End of Navigation */
+
+
+
+
+
+/* Heading */
+
+header .heading {
+    width: 100%;
+    height: calc(100% - 14vmin);
+    background-color: rgba(8,23,46,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+header .heading-text {
+    width: 70%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-4);
+    font-family: var(--montserrat);
+    transform: translateY(-0.7rem);
+    z-index: 1;
+}
+
+header .heading-text h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+header .heading-text h1 {
+    font-size: 7rem;
+    font-family: var(--playfair);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+header .heading-text h3 {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* End of Header Text */
+
+
+/* Golden Lines */
+
+.box-lines {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container-lines {
+    width: 24vmin;
+    height: 100%;
+    z-index: 0;
+
+    @media (max-width: 952) {
+        
+    }
+}
+
+.container-lines:nth-child(1) {
+    border-right: 1px solid var(--color-4);
+}
+.container-lines:nth-child(2) {
+    border-left: 1px solid var(--color-4);
+}
+
+/* End of Golden Lines */
+
+
+/* ------------------- END OF HEADER ------------------- */
+
+
+
+
+
+
+
+
+
+/* ------------------- START OF FOOTER ------------------- */
+
+footer {
+    width: 100%;
+    height: 40vmin;
+    background-color: var(--color-1);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--montserrat);
+    color: white;
+
+    @media (max-width: 768px) {
+        height: 60vmin;
+    }
+    @media (max-width: 575px) {
+        height: 70vmin;
+    }
+    @media (max-width: 480px) {
+        height: 80vmin;
+    }
+    @media (max-width: 350px) {
+        height: 100vmin;
+    }
+}
+
+footer .footer-text {
+    height: 100%;
+    width: 60%;
+    border-left: 1px solid var(--color-3);
+    border-right: 1px solid var(--color-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    
+}
+
+footer .image {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .footer-text img {
+    width: 22vmin;
+}
+
+footer .texts {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+footer h2 {
+    font-weight: 400;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+footer .footer-lists {
+    list-style: none;
+    width: 60vmin;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .lists {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+footer .lists::before,
+footer .lists::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-bottom: 2px solid var(--color-4);
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+footer .lists::before {
+    left: 0;
+    bottom: -4px;
+}
+
+footer .lists::after {
+    right: 0;
+    bottom: -10px;
+}
+
+footer .lists:hover::before,
+footer .lists:hover::after {
+    width: 0;
+}

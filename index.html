@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeen</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Neal Aquino -->
+
+    <div class="newsletter">
+        <div class="container">
+            <div class="exit-button">
+                <i class='bx bx-x'></i>
+            </div>
+            <div class="newsletter-container">
+                <img src="./images/Jeen-Logo.png" alt="">
+                <h2>Don't Miss Out!</h2>
+                <h1>Unlock 10% off your first visit!</h1>
+                <form class="offer" action="">
+                    <h5>Your Email Address</h5>
+                    <input i type="text">
+                    <input value="CLAIM OFFER" type="submit" class="submit">
+                </form>
+            </div>
+            <div class="newsletter-footer">
+                <p>By claiming this offer, you agree to receive promotional emails and updates from us. You can opt-out anytime.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="exit">
+            <i class='bx bx-x sidebar-exit'></i>
+        </div>
+        <div class="sidebar-container">
+            <h1>Reservation</h1>
+            <div class="forms">
+                <div class="form-field">
+                    <h3>Name:</h3>
+                    <input placeholder="Your Name" type="text">
+                </div>
+                <div class="form-field">
+                    <h3>Email:</h3>
+                    <input placeholder="Your Email" type="text">
+                </div>
+                <div class="form-field">
+                    <h3>Phone #:</h3>
+                    <input placeholder="Your Phone #" type="text">
+                </div>
+                <div class="form-field">
+                    <h3>Date:</h3>
+                    <input type="date">
+                </div>
+                <div class="form-field">
+                    <h3>Time:</h3>
+                    <input type="time">
+                </div>
+                <div class="form-field">
+                    <h3>Party Size:</h3>
+                    <select name="" id="">
+                        <option value="1">1 Person</option>
+                        <option value="2">2 Person</option>
+                        <option value="3">3 Person</option>
+                        <option value="4">4 Person</option>
+                        <option value="5">5 Person</option>
+                        <option value="6">6 Person</option>
+                        <option value="6+">6+ Person</option>
+                    </select>
+                </div>
+            </div>
+            <input id="submit" type="submit">
+        </div>
+    </div>
+
+    <a href="./checkout.html" class="shopping-bag"><i class='bx bx-shopping-bag'></i></a>
+
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <div id="logo">
+                    <img src="./images/Jeen-Logo.png" alt="">
+                </div>
+                <div class="menu">
+                    <ul class="menu-list">      
+                        <li>
+                            <a href="./index.html" class="nav-links">Home</a>
+                        </li>
+                        <li>
+                            <a href="./about.html" class="nav-links">About</a>
+                        </li>
+                        <li>
+                            <a href="./menu.html" class="nav-links">Menu</a>
+                        </li>
+                        <li>
+                            <a href="./contactus.html" class="nav-links">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-burger">
+                    <h1 class="the-r">R</h1>
+                    <div id="burger">
+                        <div class="lines"></div>
+                        <div class="lines"></div>
+                        <div class="lines"></div>
+                        <div class="lines"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="heading">
+            <div class="heading-text">
+                <h2>Welcome To Your New Favorite Spot</h2>
+                <h1>JEEN BISTRO</h1>
+                <h3>Where Elegance Meets Culinary Excellence</h3>
+            </div>
+        </div>
+        <div class="box-lines">
+            <div class="container-lines"></div>
+            <div class="container-lines"></div>
+        </div>
+    </header>
+    <footer>
+        <div class="footer-text">
+            <div class="image">
+                <img src="./images/Jeen-Logo.png" alt="">
+            </div>
+
+            <div class="texts">
+                <h2>Jeen Restaurant, 123 Main Street Vancouver, BC</h2>
+                <h2>V6A 1A1, (749) 194-1230, reservation@jeen.ca</h2>
+                <h2>Open: 09:00 am - 11:00 pm</h2>
+            </div>
+            <ul class="footer-lists">
+                <li>
+                    <a href="#" class="lists">Facebook</a>
+                </li>
+                <li>
+                    <a href="#" class="lists">Instagram</a>
+                </li>
+                <li>
+                    <a href="#" class="lists">Twitter</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="box-lines">
+            <div class="container-lines"></div>
+            <div class="container-lines"></div>
+        </div>
+    </footer>
+
+    <script>
+        const newsletter = document.querySelector(".newsletter"),
+              button = document.querySelector(".bx-x"),
+              offer = document.querySelector(".offer");
+
+        offer.addEventListener("click", (event) => {
+            event.preventDefault();
+            newsletter.classList.toggle("close");
+        })
+
+        button.addEventListener("click", () => {
+            newsletter.classList.toggle("close");
+        })
+
+        const exitButton = document.querySelector(".sidebar-exit"),
+              openButton = document.querySelector("#burger"),
+              sidebar = document.querySelector(".sidebar");
+
+        exitButton.addEventListener("click", () => {
+            sidebar.classList.remove("open");
+            sidebar.classList.toggle("close");
+        })
+
+        openButton.addEventListener("click", () => {
+            sidebar.classList.remove("close");
+            sidebar.classList.toggle("open");
+        })
+
+    </script>
+
+</body>
+</html>

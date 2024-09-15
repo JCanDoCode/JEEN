@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeen</title>
+    <link rel="stylesheet" href="./about.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Neal Aquino -->
+
+    <div class="sidebar">
+        <div class="exit">
+            <i class='bx bx-x sidebar-exit'></i>
+        </div>
+        <div class="sidebar-container">
+            <h1>Reservation</h1>
+            <div class="forms">
+                <div class="form-field">
+                    <h3>Name:</h3>
+                    <input placeholder="Your Name" type="text">
+                </div>
+                <div class="form-field">
+                    <h3>Email:</h3>
+                    <input placeholder="Your Email" type="text">
+                </div>
+                <div class="form-field">
+                    <h3>Phone Number:</h3>
+                    <input placeholder="Your Phone #" type="text">
+                </div>
+                <div class="form-field">
+                    <h3>Date:</h3>
+                    <input type="date">
+                </div>
+                <div class="form-field">
+                    <h3>Time:</h3>
+                    <input type="time">
+                </div>
+                <div class="form-field">
+                    <h3>Party Size:</h3>
+                    <select name="" id="">
+                        <option value="1">1 Person</option>
+                        <option value="2">2 Person</option>
+                        <option value="3">3 Person</option>
+                        <option value="4">4 Person</option>
+                        <option value="5">5 Person</option>
+                        <option value="6">6 Person</option>
+                        <option value="6+">6+ Person</option>
+                    </select>
+                </div>
+            </div>
+            <input id="submit" type="submit">
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <div id="logo">
+                    <img src="./images/Jeen-Logo.png" alt="">
+                </div>
+                <div class="menu">
+                    <ul class="menu-list">      
+                        <li>
+                            <a href="./index.html" class="nav-links">Home</a>
+                        </li>
+                        <li>
+                            <a href="./about.html" class="nav-links">About</a>
+                        </li>
+                        <li>
+                            <a href="./menu.html" class="nav-links">Menu</a>
+                        </li>
+                        <li>
+                            <a href="./contactus.html" class="nav-links">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-burger">
+                    <h1 class="the-r">R</h1>
+                    <div id="burger">
+                        <div class="lines"></div>
+                        <div class="lines"></div>
+                        <div class="lines"></div>
+                        <div class="lines"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="header-container">
+            <div class="cover">
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="section-texts">
+            <div class="container-header">
+                <div class="header-text">
+                    <h1>ABOUT US</h1>
+                </div>
+            </div>
+            <div class="container-text">
+                <div class="texts">
+                    <p>Welcome to Jeen, a new downtown Vancouver bistro and bar where exceptional food meets innovative cocktails in a welcoming, sophisticated setting. Our menu, crafted with locally-sourced ingredients, offers a fusion of global flavours, ensuring a memorable dining experience. Our inviting space strikes the perfect balance between comfort and modernity, creating an atmosphere suitable for any occasion. Explore our bar's signature cocktails, expertly crafted to complement our culinary creations. Join us at Jeen, where every detail is designed to deliver an extraordinary dining experience. We hope to see you soon!</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-texts">
+            <div class="container-header">
+                <div class="header-text">
+                    <h1>MISSIONS & VALUES</h1>
+                </div>
+            </div>
+            <div class="container-text">
+                <div class="texts">
+                    <p>At Jeen, we're on a mission to create an unforgettable dining experience.</p>
+                    <p>We take pride in our innovative cocktails, expertly crafted to complement our dishes. Every detail at Jeen is meticulously designed, from the decor down to the cutlery. With a commitment to excellence, sustainability, and hospitality, we aim to foster a sense of community where every guest feels valued. Come join us at Jeen, where exceptional dining awaits.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-photos">
+            <div class="photos"></div>
+            <div class="photos"></div>
+            <div class="photos"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-text">
+            <div class="image">
+                <img src="./images/Jeen-Logo.png" alt="">
+            </div>
+
+            <div class="texts">
+                <h2>Jeen Restaurant, 123 Main Street Vancouver, BC</h2>
+                <h2>V6A 1A1, (749) 194-1230, reservation@jeen.ca</h2>
+                <h2>Open: 09:00 am - 11:00 pm</h2>
+            </div>
+            <ul class="footer-lists">
+                <li>
+                    <a href="#" class="lists">Facebook</a>
+                </li>
+                <li>
+                    <a href="#" class="lists">Instagram</a>
+                </li>
+                <li>
+                    <a href="#" class="lists">Twitter</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="box-lines">
+            <div class="container-lines"></div>
+            <div class="container-lines"></div>
+        </div>
+    </footer>
+    <script>
+        const exitButton = document.querySelector(".sidebar-exit"),
+              openButton = document.querySelector("#burger"),
+              sidebar = document.querySelector(".sidebar");
+
+        exitButton.addEventListener("click", () => {
+            sidebar.classList.remove("open");
+            sidebar.classList.toggle("close");
+        })
+
+        openButton.addEventListener("click", () => {
+            sidebar.classList.remove("close");
+            sidebar.classList.toggle("open");
+        })
+
+    </script>
+</body>
+</html>
