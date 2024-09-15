@@ -201,6 +201,9 @@ body {
 
 /* END OF SHOPPING BAG */
 
+
+
+
 /* SIDE BAR */
 
 .sidebar {
@@ -504,8 +507,6 @@ header .menu-list .nav-links {
     text-decoration: none;
     padding: 0.4rem 0.4rem;
     position: relative;
-
-    
 }
 
 @media (max-width: 575px) {

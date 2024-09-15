@@ -48,7 +48,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 35px black;
     transition: transform 1s ease;
     transform: translateX(40vw);
 }
@@ -76,7 +75,6 @@ body {
     height: 9rem;
     padding-right: 15px;
     position: absolute;
-    /* background-color: #08172e; */
     top: 0;
     right: 0;
     display: flex;
@@ -106,6 +104,7 @@ body {
     font-family: var(--montserrat);
     border-radius: 2rem;
     justify-content: space-around;
+    overflow-x: hidden;
     overflow-y: scroll;
 
     &.sidebar-container::-webkit-scrollbar {
@@ -134,11 +133,14 @@ body {
 .sidebar .form-field {
     width: 100%;
     height: 4rem;
-    /* background-color: aqua; */
     margin: 4.5rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 1043px) {
+        flex-direction: column;
+    }
 }
 
 .sidebar .form-field h3 {
@@ -164,12 +166,12 @@ body {
 
 .sidebar #submit {
     width: 100%;
-    height: 10rem;
+    min-height: 8rem;
     font-family: var(--montserrat);
     background-color: var(--color-4);
     border: none;
     border-radius: 1rem;
-    font-size: 2vmin;
+    font-size: 2rem;
     transition: all 0.5s ease;
     cursor: pointer;
 }
@@ -178,6 +180,83 @@ body {
     background-color: #806446;
 }
 
+@media all and (max-width:760px){
+    .sidebar {
+        position: fixed;                                                                            
+        width: 50vw;
+        height: 100vh;
+        background-image: url(./images/ambitious-studio-rick-barrett-QjUY7auDzUQ-unsplash.png);
+        background-size: cover;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 1s ease;
+        transform: translateX(75vw);
+    }
+
+    .sidebar.close {
+        transform: translateX(50vw)
+    }
+
+    .sidebar.open {
+        transform: translateX(0px)
+    }
+}
+
+@media all and (max-width: 575px){
+    .sidebar {
+        position: fixed;                                                                            
+        width: 60vw;
+        height: 100vh;
+        background-image: url(./images/ambitious-studio-rick-barrett-QjUY7auDzUQ-unsplash.png);
+        background-size: cover;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 1s ease;
+        transform: translateX(75vw);
+    }
+
+    .sidebar.close {
+        transform: translateX(60vw)
+    }
+
+    .sidebar.open {
+        transform: translateX(0px)
+    }
+}
+
+@media all and (max-width: 480px) {
+    .sidebar {
+        position: fixed;                                                                            
+        width: 75vw;
+        height: 100vh;
+        background-image: url(./images/ambitious-studio-rick-barrett-QjUY7auDzUQ-unsplash.png);
+        background-size: cover;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 1s ease;
+        transform: translateX(75vw);
+    }
+
+    .sidebar.close {
+        transform: translateX(75vw)
+    }
+
+    .sidebar.open {
+        transform: translateX(0px)
+    }
+}
 
 /* END OF SIDE BAR */
 
@@ -190,8 +269,6 @@ body {
 
 header {
     width: 100vw;
-    height: calc(100vh - 37vmin);
-
     background-size: cover;
 }
 
@@ -243,19 +320,26 @@ header .menu-list {
     align-items: center;
     list-style: none;
     font-size: 2.4rem;
-    margin: 0;
-    padding: 0;
-    z-index: 999;
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
+    @media (max-width: 375px) {
+        font-size: 1.8rem;
+    }
 }
 
 header .menu-list .nav-links {
     color: white;
     text-decoration: none;
     padding: 0.4rem 0.4rem;
-    z-index: 999;
     position: relative;
-    font-size: 2.08rem;
-    /* background-color: #cc7d51; */
+}
+
+@media (max-width: 575px) {
+    .menu-list li:nth-of-type(1) {
+        display: none;
+    }
 }
 
 header .menu-list .nav-links::before {
@@ -266,7 +350,6 @@ header .menu-list .nav-links::before {
     bottom: -0.1rem; 
     border-bottom: 0.1rem solid var(--color-4);
     transition: all 0.5s ease;
-    z-index: 999;
 }
 
 header .menu-list .nav-links:hover::before {
@@ -281,7 +364,6 @@ header .menu-list .nav-links::after {
     bottom: -0.6rem; 
     border-bottom: 0.1rem solid var(--color-4);
     transition: all 0.5s 0.1s ease;
-    z-index: 999;
 }
 
 header .menu-list .nav-links:hover::after {
@@ -304,8 +386,7 @@ header .menu-burger .the-r {
     font-weight: 100;
     font-size: 12vmin;
     opacity: 0.25;
-    transform: translateY(-5px);
-    transition: all 0.5s ease;
+    transform: translateY(-0.5rem);
 }
 
 header #burger {
@@ -314,17 +395,18 @@ header #burger {
     height: 7vmin;
     cursor: pointer;
     transform: translateX(-0.5rem) scale(.80);
-    z-index: 999;
-
 }
 
 header .lines {
     position: absolute;
-    border: 0.15rem solid var(--color-4);
+    border: 0.2rem solid var(--color-4);
     width: 70%;
     transition: left 0.5s ease; 
     left: 0;
-    z-index: 999;
+
+    @media (max-width: 575px) {
+        border: 0.1rem solid var(--color-4);
+    }
 }
 
 
@@ -400,15 +482,21 @@ section {
 
 section .section-1 {
     width: 78%;
-    height: 90vmin;
     display: flex;
     justify-content: space-between;
     margin: 3.5rem 0;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 }
 
 section .section-1 .containers{
     width: 45%;
-    height: 100%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 section .section-1 .containers:nth-child(1) {
@@ -418,23 +506,35 @@ section .section-1 .containers:nth-child(1) {
 
 section .section-1 .info {
     width: 100%;
-    height: 80%;
+    padding-top: 2rem;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     border-top: 2px solid var(--color-4);
     color: var(--color-4);
+
+    @media (max-width: 1500px) {
+        flex-direction: column;
+        border-top: unset;
+    }
 }
 
 section .section-1 .infos {
     width: 38%;
     height: 90%;
+    min-height: 500px;
+    padding: 2rem 0;
     border: 1px solid var(--color-4);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     position: relative;
+
+    @media (max-width: 1500px) {
+        width: 100%;
+        min-height: unset;
+        margin-bottom: 2rem;
+    }
 }
 
 section .section-1 .opening-hours {
@@ -444,7 +544,7 @@ section .section-1 .opening-hours {
 
 section .section-1 .boxes {
     width: 80%;
-    height: 34%;
+    margin-bottom: 1rem;
     text-align: center;
     display: flex;
     align-items: center;
@@ -470,10 +570,14 @@ section .section-1 .containers:nth-child(2){
 
 section .section-1 .containers .background {
     width: 100%;
-    height: 90%;
+    height: 85vmin;
     background-image: url(./images/chair.png);
     background-size: cover;
     background-position-y: 50%;
+
+    @media (max-width: 768px) {
+        height: 20vmin;
+    }
 }
 
 
@@ -483,19 +587,26 @@ section .section-1 .containers .background {
 
 section .section-2 {
     width: 78%;
-    height: 85vmin;
     display: flex;
     justify-content: space-between;
     margin: 3.5rem 0;
+
+    @media (max-width: 990px) {
+        flex-direction: column-reverse;
+    }
 }
 
 section .section-2 .containers{
     width: 45%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    @media (max-width: 990px) {
+        width: 100%;
+        margin-bottom: 5rem;
+    }
 }
 
 section .section-2 .contact-container {
@@ -509,9 +620,7 @@ section .section-2 .contact-container {
 }
 
 section .section-2 .contact {
-    height: 80%;
     width: 100%;
-    /* background-color: #15253f; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -538,7 +647,7 @@ section form h2 {
     margin-top: 3rem;
     font-family: var(--montserrat);
     font-weight: 300;
-    font-size: 2vmin;
+    font-size: 2rem;
 }
 
 section form input {
@@ -549,7 +658,7 @@ section form input {
     border: none;
     border-bottom: 1px solid var(--color-4);
     color: var(--color-4);
-    font-size: 2vmin;
+    font-size: 2rem;
 }
 
 section form #submit {
@@ -616,12 +725,24 @@ footer {
     align-items: center;
     font-family: var(--montserrat);
     color: white;
-    border-top: 1px solid var(--color-3);
+
+    @media (max-width: 768px) {
+        height: 60vmin;
+    }
+    @media (max-width: 575px) {
+        height: 70vmin;
+    }
+    @media (max-width: 480px) {
+        height: 80vmin;
+    }
+    @media (max-width: 350px) {
+        height: 100vmin;
+    }
 }
 
 footer .footer-text {
     height: 100%;
-    width: 40%;
+    width: 60%;
     border-left: 1px solid var(--color-3);
     border-right: 1px solid var(--color-3);
     display: flex;
@@ -629,12 +750,12 @@ footer .footer-text {
     align-items: center;
     flex-direction: column;
     z-index: 1;
+    
 }
 
 footer .image {
     width: 100%;
-    height: 100px;
-    /* background-color: #283d5b; */
+    height: 25%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -642,7 +763,6 @@ footer .image {
 
 footer .footer-text img {
     width: 22vmin;
-    margin-left: 20px;
 }
 
 footer .texts {
@@ -695,155 +815,4 @@ footer .lists:hover::after {
     width: 0;
 }
 
-
-
 /* ------------------- END OF FOOTER ------------------- */
-
-@media all and (max-width:1051px){
-    /* SIDE BAR */
-
-    .sidebar {
-        position: fixed;                                                                            
-        width: 75vw;
-        height: 100vh;
-        background-image: url(./images/ambitious-studio-rick-barrett-QjUY7auDzUQ-unsplash.png);
-        background-size: cover;
-        top: 0;
-        right: 0;
-        z-index: 9999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 0 35px black;
-        transition: transform 1s ease;
-        transform: translateX(75vw);
-    }
-
-    .sidebar::before {
-        width: 100%;
-        height: 100%;
-        content: "";
-        position: absolute;
-        background-color: rgba(0,0,0,0.6);
-        z-index: -1;
-    }
-
-    .sidebar.close {
-        transform: translateX(75vw)
-    }
-
-    .sidebar.open {
-        transform: translateX(0px)
-    }
-
-    .sidebar .exit {
-        color: white;
-        width: 100%;
-        height: 9rem;
-        padding-right: 15px;
-        position: absolute;
-        /* background-color: #08172e; */
-        top: 0;
-        right: 0;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-    }
-
-    .sidebar .exit i {
-        font-size: 6vmin;
-        cursor: pointer;
-        transition: all 0.5s ease;
-    }
-
-    .sidebar .exit i:hover {
-        color: #aaaaaa;
-    }
-
-    .sidebar .sidebar-container {
-        width: 80%;
-        height: 80%;
-        background-color: rgba(14, 14, 14, 0.9);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: white;
-        padding: 2.5rem 2rem;
-        font-family: var(--montserrat);
-        border-radius: 2rem;
-        justify-content: space-around;
-        overflow-y: scroll;
-
-        &.sidebar-container::-webkit-scrollbar {
-            width: 1rem;
-        }
-        &.sidebar-container::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 5rem;
-        }
-        &.sidebar-container::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-    }
-
-    .sidebar .sidebar-container h1 {
-        color: var(--color-4);
-        font-weight: 300;
-        font-size: 3rem;
-    }
-
-    .sidebar .forms {
-        width: 100%;
-        height: auto;
-    }
-
-    .sidebar .form-field {
-        width: 100%;
-        height: 4rem;
-        /* background-color: aqua; */
-        margin: 4.5rem 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .sidebar .form-field h3 {
-        font-weight: 200;
-        font-size: 2rem;
-    }
-
-    .sidebar .form-field input {
-        height: 100%;
-        padding: 1rem;
-        font-family: var(--montserrat);
-        border: none;
-        border-radius: 0.5rem;
-    }
-
-    .sidebar .form-field select {
-        height: 100%;
-        padding: 1rem;
-        font-family: var(--montserrat);
-        border: none;
-        border-radius: 0.5rem;
-    }
-
-    .sidebar #submit {
-        width: 100%;
-        height: 10rem;
-        font-family: var(--montserrat);
-        background-color: var(--color-4);
-        border: none;
-        border-radius: 1rem;
-        font-size: 2vmin;
-        transition: all 0.5s ease;
-        cursor: pointer;
-    }
-
-    .sidebar #submit:hover {
-        background-color: #806446;
-    }
-
-
-    /* END OF SIDE BAR */
-}
