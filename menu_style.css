@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 html {
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
@@ -270,7 +271,55 @@ body {
 
 /* END OF SIDE BAR */
 
+/* SHOPPING BAG */
 
+.item-count {
+    position: fixed;
+    user-select: none;
+    right: calc(5vw + 7rem);
+    bottom: calc(5vh + 7rem);
+    padding: 0.5rem 1rem;
+    border-radius: 30rem;
+    font-family: var(--montserrat);
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: var(--color-5);
+    color: white;
+    z-index: 11;
+
+    @media (max-width: 480px) {
+        right: calc(5vw + 5rem);
+        bottom: calc(5vh + 5rem);
+        font-size: 1.8rem;
+    }
+}
+
+.shopping-bag {
+    position: fixed;
+    right: 5vw;
+    bottom: 5vh;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background-color: var(--color-2);
+    filter: drop-shadow(0.5rem 0.5rem 0.75rem black);
+    transition: all 0.5s ease;
+    z-index: 10;
+
+    &:hover {
+        transform: translateY(-1rem);
+    }
+}
+
+.bx-shopping-bag {
+    font-size: 7rem;
+    color: var(--color-4);
+
+    @media (max-width: 480px) {
+        font-size: 5rem;
+    }
+}
+
+/* END OF SHOPPING BAG */
 
 header {
     width: 100vw;
@@ -467,7 +516,7 @@ header .lines:nth-child(4) {
 #menu h1 {
     height: fit-content;
     width: 100%;
-    font-size: 7.2rem;
+    font-size: 5.2rem;
     text-align: center;
     margin: 0 0 2vmin 0;
 }
@@ -475,13 +524,13 @@ header .lines:nth-child(4) {
     height: 10vh;
     width: 100%;
     margin: 0 0 0 0;
-    font-size: 4.8rem;
+    font-size: 4rem;
     text-align: center;
 }
 #menu h3 {
     height: 100%;
     width: 50%;
-    font-size: 3.6rem;
+    font-size: 2.4rem;
     margin: 0;
     display: inline;
 }
@@ -626,6 +675,8 @@ p {
     width: 100%;
     margin: 0 0 0.5vmin 0;
     display: flex;
+    align-items: end;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 .price-underline {
@@ -670,9 +721,31 @@ p {
     position: relative;
     text-wrap: wrap;
     font-size: 1em;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 2%;
+
+    .bx-shopping-bag {
+        cursor: pointer;
+        font-size: 4rem;
+    }
+    .small-large {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        span {
+            font-size: 1.8rem;
+        }
+    }
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
 /* \/ DRINKS MENU \/ */
+.drinks {
+    justify-content: space-between;
+}
 .reds {
     height: 15vh;
     width: 100%;
@@ -855,7 +928,7 @@ footer .lists {
     .item1 {
         height: fit-content;
         width: 100%;
-        margin: 0 20% 5vmin 0;
+        margin: 0 0 5vmin 0;
         position: relative;
         display: flex;
         flex-wrap: wrap;
@@ -873,7 +946,7 @@ footer .lists {
         width: 40%;
         margin: 0 0 5vmin 0;
         position: relative;
-        display: flex;
+        display: none;
         flex-wrap: wrap;
         opacity: 0;
     }
@@ -882,7 +955,7 @@ footer .lists {
         width: 40%;
         margin: 0 0 5vmin 0;
         position: relative;
-        display: flex;
+        display: none;
         flex-wrap: wrap;
         opacity: 0;
     }

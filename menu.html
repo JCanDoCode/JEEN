@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeen</title>
-    <link rel="stylesheet" href="menu_style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./menu_style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Josel Canlas -->
@@ -57,6 +54,9 @@
         </div>
     </div>
 
+    <p class="item-count" id="itemCount"></p>
+    <a href="./checkout.html" class="shopping-bag"><i class='bx bx-shopping-bag'></i></a>
+    
     <header>
         <nav>
             <div class="nav-bar">
@@ -110,6 +110,7 @@
                 </div>
                 <span class="description">
                     Artisan crafted bread served with freshly made garlic butter compound.
+                    <i data-item="sideBread" class='bx bx-shopping-bag add-btn'></i>
                 </span>
             </div>
             <div class="item2">
@@ -123,6 +124,7 @@
                 </div>
                 <span class="description">
                     A medley of marinated olives for the perfect start.
+                    <i class='bx bx-shopping-bag add-btn'></i>
                 </span>
             </div>
             <div class="item1">
@@ -136,6 +138,16 @@
                 </div>
                 <span class="description">
                     Daily house-made soup. Can be ordered as a small or large. Ask waiter for more details.
+                    <span class="small-large">
+                        <span>
+                            small
+                            <i class='bx bx-shopping-bag add-btn'></i>
+                        </span>
+                        <span>
+                            large
+                            <i class='bx bx-shopping-bag add-btn'></i>
+                        </span>
+                    </span>
                 </span>
             </div>
             <div class="item2">
@@ -149,6 +161,7 @@
                 </div>
                 <span class="description">
                     Your choice of salt and pepper, buffalo, or bbq flavours.
+                    <i class='bx bx-shopping-bag add-btn'></i>
                 </span>
             </div>
             <div class="item1">
@@ -162,6 +175,16 @@
                 </div>
                 <span class="description">
                     Made in-house and served with anchovies and garlic chips
+                    <span class="small-large">
+                        <span>
+                            small
+                            <i class='bx bx-shopping-bag add-btn'></i>
+                        </span>
+                        <span>
+                            large
+                            <i class='bx bx-shopping-bag add-btn'></i>
+                        </span>
+                    </span>
                 </span>
             </div>
             <div class="item2">
@@ -175,6 +198,7 @@
                 </div>
                 <span class="description">
                     A hearty mix of quinoa, fresh vegetables, and a zesty vinaigrette.
+                    <i class='bx bx-shopping-bag add-btn'></i>
                 </span>
             </div>
         </div>
@@ -193,6 +217,7 @@
                 </div>
                 <span class="description">
                     Our signature burger with a succulent patty, melted cheese, crisp lettuce, and special sauce. Served with seasoned fries.
+                    <i class='bx bx-shopping-bag add-btn'></i>
                 </span>
             </div>
             <div class="item2">
@@ -206,19 +231,21 @@
                 </div>
                 <span class="description">
                     Juicy and perfectly grilled 8oz steak cooked to your liking. Accompanied by your choice of sides.
+                    <i class='bx bx-shopping-bag add-btn'></i>
                 </span>
             </div>
             <div class="item1">
                 <div class="item-heading">
                     <h3>Truffle-infused Risotto</h3>
                     <div class="price-underline">
-                        <p class="price2">30</p>
+                        <p class="price">30</p>
                         <div class="price-line1"></div>
                         <div class="price-line2"></div>
                     </div>
                 </div>
                 <span class="description">
                     Creamy Arborio rice cooked to perfection with a touch of truffle essence.
+                    <i class='bx bx-shopping-bag add-btn'></i>
                 </span>
             </div>
             <div class="item2">
@@ -232,19 +259,21 @@
                 </div>
                 <span class="description">
                     Fresh salmon fillet served with a citrus-infused sauce.
+                    <i class='bx bx-shopping-bag add-btn'></i>
                 </span>
             </div>
             <div class="item1">
                 <div class="item-heading">
                     <h3>Margherita Pizza</h3>
                     <div class="price-underline">
-                        <p class="price2">20</p>
+                        <p class="price">20</p>
                         <div class="price-line1"></div>
                         <div class="price-line2"></div>
                     </div>
                 </div>
                 <span class="description">
                     Classic tomato, mozzarella, and basil on a thin, crispy crust.
+                    <i class='bx bx-shopping-bag add-btn'></i>
                 </span>
             </div>
             <div class="item2">
@@ -258,6 +287,7 @@
                 </div>
                 <span class="description">
                     Tender chicken, bacon, lettuce and tomato in between two pieces of sour dough bread that have been caressed with a light layer of mayo.
+                    <i class='bx bx-shopping-bag add-btn'></i>
                 </span>
             </div>
         </div>
@@ -276,6 +306,7 @@
                 </div>
                 <span class="description">
                     Indulge in layers of rich dark chocolate cake, white chocolate mousse, and milk chocolate ganache. Served with a scoop of vanilla bean ice cream and drizzled with raspberry coulis.
+                    <i class='bx bx-shopping-bag add-btn'></i>
                 </span>
             </div>
             <div class="item2">
@@ -289,19 +320,21 @@
                 </div>
                 <span class="description">
                     A classic pecan pie with a modern twist. The buttery crust is filled with a luscious mixture of pecans and a generous layer of salted caramel. Topped with a dollop of whipped cream and a sprinkle of sea salt.
+                    <i class='bx bx-shopping-bag add-btn'></i>
                 </span>
             </div>
             <div class="item1">
                 <div class="item-heading">
                     <h3>Mango Tango Sorbet</h3>
                     <div class="price-underline">
-                        <p class="price2">8</p>
+                        <p class="price">8</p>
                         <div class="price-line1"></div>
                         <div class="price-line2"></div>
                     </div>
                 </div>
                 <span class="description">
                     A tropical delight featuring smooth and tangy mango sorbet served in a chilled pineapple boat. Topped with diced kiwi, strawberries, and a drizzle of passion fruit sauce.
+                    <i class='bx bx-shopping-bag add-btn'></i>
                 </span>
             </div>
             <div class="item2">
@@ -315,19 +348,21 @@
                 </div>
                 <span class="description">
                     An Asian-inspired twist on the classic Italian dessert. Layers of matcha-infused ladyfingers and mascarpone cream, garnished with a dusting of matcha powder and edible flowers.
+                    <i class='bx bx-shopping-bag add-btn'></i>
                 </span>
             </div>
             <div class="item1">
                 <div class="item-heading">
                     <h3>Warm Apple Cinnamon Empanadas</h3>
                     <div class="price-underline">
-                        <p class="price2">21</p>
+                        <p class="price">21</p>
                         <div class="price-line1"></div>
                         <div class="price-line2"></div>
                     </div>
                 </div>
                 <span class="description">
                     Flaky pastry pockets filled with warm cinnamon-spiced apples. Served with a scoop of cinnamon ice cream and a drizzle of caramel sauce.
+                    <i class='bx bx-shopping-bag add-btn'></i>
                 </span>
             </div>
             <div class="item2">
@@ -341,6 +376,7 @@
                 </div>
                 <span class="description">
                     A chocolate lover's dream! A decadent chocolate lava cake with a gooey, molten center. Served with a scoop of velvety chocolate ice cream and dusted with powdered sugar.
+                    <i class='bx bx-shopping-bag add-btn'></i>
                 </span>
             </div>
         </div>
@@ -352,8 +388,8 @@
         <p class="menu-description">Cocktail Creations at JEEN.</p>
         <div class="reds"><h2>Reds</h2></div>
 
-        <div class="item-container">
-            <div class="item1">
+        <div class="item-container drinks">
+            <div class="item2">
                 <div class="item-heading">
                     <h3>Merlot</h3>
                     <div class="price-underline">
@@ -373,7 +409,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item1">
+            <div class="item2">
                 <div class="item-heading">
                     <h3>Pinot Noir</h3>
                     <div class="price-underline">
@@ -416,8 +452,8 @@
         </div>
 
         <div class="whites"><h2>Whites</h2></div>
-        <div class="item-container">
-            <div class="item1">
+        <div class="item-container drinks">
+            <div class="item2">
                 <div class="item-heading">
                     <h3>Chardonnay</h3>
                     <div class="price-underline">
@@ -437,7 +473,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item1">
+            <div class="item2">
                 <div class="item-heading">
                     <h3>Pinot Grigio</h3>
                     <div class="price-underline">
@@ -480,8 +516,8 @@
         </div>
 
         <div class="martinis-cocktails"><h2>Martinis and Cocktails</h2></div>
-        <div class="item-container">
-            <div class="item1">
+        <div class="item-container drinks">
+            <div class="item2">
                 <div class="item-heading">
                     <h3>Classic Martini</h3>
                     <div class="price-underline">
@@ -501,7 +537,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item1">
+            <div class="item2">
                 <div class="item-heading">
                     <h3>Cucumber Mint Bliss</h3>
                     <div class="price-underline">
@@ -521,7 +557,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item1">
+            <div class="item2">
                 <div class="item-heading">
                     <h3>Jeen G&T</h3>
                     <div class="price-underline">
@@ -544,8 +580,8 @@
         </div>
         
         <div class="refreshing-sips"><h2>Refreshing Sips</h2></div>
-        <div class="item-container">
-            <div class="item1">
+        <div class="item-container drinks">
+            <div class="item2">
                 <div class="item-heading">
                     <h3>Ginger Ale Fizz</h3>
                     <div class="price-underline">
@@ -565,7 +601,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item1">
+            <div class="item2">
                 <div class="item-heading">
                     <h3>JEEN Cola</h3>
                     <div class="price-underline">
@@ -608,6 +644,7 @@
         </div>
     </div>
 
+    <script type="module" src="./js/main.js"></script>
     <script>
         const exitButton = document.querySelector(".sidebar-exit"),
               openButton = document.querySelector("#burger"),
@@ -623,6 +660,5 @@
             sidebar.classList.toggle("open");
         })
     </script>
-    <div class="footer"></div>
 </body>
 </html>

@@ -178,10 +178,31 @@ body {
 
 /* SHOPPING BAG */
 
+.item-count {
+    position: fixed;
+    user-select: none;
+    right: calc(5vw + 7rem);
+    bottom: calc(5vh + 7rem);
+    padding: 0.5rem 1rem;
+    border-radius: 30rem;
+    font-family: var(--montserrat);
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: var(--color-5);
+    color: white;
+    z-index: 11;
+
+    @media (max-width: 480px) {
+        right: calc(5vw + 5rem);
+        bottom: calc(5vh + 5rem);
+        font-size: 1.8rem;
+    }
+}
+
 .shopping-bag {
     position: fixed;
-    left: 92vw;
-    top: 85vh;
+    right: 5vw;
+    bottom: 5vh;
     padding: 1rem;
     border-radius: 1.5rem;
     background-color: var(--color-2);
@@ -197,6 +218,10 @@ body {
 .bx-shopping-bag {
     font-size: 7rem;
     color: var(--color-4);
+
+    @media (max-width: 480px) {
+        font-size: 5rem;
+    }
 }
 
 /* END OF SHOPPING BAG */
