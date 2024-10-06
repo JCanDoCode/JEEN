@@ -500,527 +500,96 @@ header .lines:nth-child(4) {
 
 /* End of Navigation */
 
-
-#menu {
-    height: auto;
+/* Body */
+section {
     width: 100%;
-    justify-content: center;
-    color: #BC905F;
-    text-wrap: wrap;
     display: flex;
-    flex-wrap: wrap;
-    font-size: 20px;
-}
-
-
-#menu h1 {
-    height: fit-content;
-    width: 100%;
-    font-size: 5.2rem;
-    text-align: center;
-    margin: 0 0 2vmin 0;
-}
-#menu h2 {
-    height: 10vh;
-    width: 100%;
-    margin: 0 0 0 0;
-    font-size: 4rem;
-    text-align: center;
-}
-#menu h3 {
-    height: 100%;
-    width: 50%;
-    font-size: 2.4rem;
-    margin: 0;
-    display: inline;
-}
-p {
-    margin: 0;
-    padding: 0;
-}
-
-.menu-description {
-    width: 50%;
-    text-align: center;
-    text-wrap: wrap;
-    font-size: 1.8rem;
-    margin-bottom: 2%;
-}
-.sides {
-    height: 15vh;
-    width: 100%;
-    margin: 0 0 10vmin 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url(./images/sides.jpeg);
-    background-size: cover;
-    background-position: 70% 70%;
-    position: relative;
-}
-.sides::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 0;
-}
-
-.sides h2 {
-    z-index: 1;
-}
-
-.mains {
-    height: 15vh;
-    width: 100%;
-    margin: 0 0 5vmin 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url(./images/mains.jpeg);
-    background-size: cover;
-    background-position: 70% 70%;
-    position: relative;
-}
-.mains::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.mains h2 {
-    z-index: 1;
-}
-
-.desserts {
-    height: 15vh;
-    width: 100%;
-    margin: 0 0 5vmin 0;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    background: url(./images/desserts.jpg);
-    background-size: cover;
-    background-position: 50% 55%;
-    position: relative;
-}
-.desserts::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.desserts h2 {z-index: 1;}
-
-.item-container {
-    height: fit-content;
-    width: 70%;
-    margin: 0 15% 7.5vmin 15%;
-    position: relative;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-.item1 {
-    height: fit-content;
-    width: 40%;
-    margin: 0 20% 5vmin 0;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-}
-.item2 {
-    height: fit-content;
-    width: 40%;
-    margin: 0 0 5vmin 0;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-}
-.item-none1 {
-    height: fit-content;
-    width: 40%;
-    margin: 0 0 5vmin 0;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    opacity: 0;
-}
-.item-none2 {
-    height: fit-content;
-    width: 40%;
-    margin: 0 0 5vmin 0;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    opacity: 0;
-}
-
-
-.item-heading {
-    height: fit-content;
-    width: 100%;
-    margin: 0 0 0.5vmin 0;
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.price-underline {
-    height: 100%;
-    width: 49.5%;
-    display: inline;
-    top: 69%;
-    left: 2.5%;
-}
-.price {
-    height: fit-content;
-    width: fit-content;
-    font-size: 3rem;
-    position: relative;
-    top: 10%;
-    left: 70%;
-}
-.price2 {
-    height: fit-content;
-    width: fit-content;
-    font-size: 3rem;
-    position: relative;
-    top: 10%;
-    left: 60%;
-}
-.price-line1 {
-    height: 0;
-    width: 50%;
-    position: relative;
-    bottom: 5px;
-    border: 0.1vmin solid #BC905F;
-}
-.price-line2 {
-    height: 0;
-    width: 100%;
-    position: relative;
-    border: 0.1vmin solid #BC905F;
-}
-.description {
-    height: 62.5%;
-    width: 100%;
-    position: relative;
-    text-wrap: wrap;
-    font-size: 1em;
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 2%;
-
-    .bx-shopping-bag {
-        cursor: pointer;
-        font-size: 4rem;
-
-        @media (max-width: 480px) {
-            font-size: 3.5rem;
-        }
-    }
-    .small-large {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
-
-        span {
-            font-size: 1.8rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        @media (max-width: 416px) {
-            flex-direction: column;
-        }
-    }
-}
-/* ------------------------------------------------------------------------------------------------------------------ */
-/* \/ DRINKS MENU \/ */
-.drinks {
-    justify-content: space-between;
-}
-.reds {
-    height: 15vh;
-    width: 100%;
-    margin: 0 0 5vmin 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url(./images/reds.jpg);
-    background-size: cover;
-    background-position: 70% 70%;
-    position: relative;
-}
-.reds::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.reds h2 {z-index: 1;}
-
-.whites {
-    height: 15vh;
-    width: 100%;
-    margin: 0 0 5vmin 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url(./images/whites.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-.whites::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.whites h2 {z-index: 1;}
-
-.martinis-cocktails {
-    height: 15vh;
-    width: 100%;
-    margin: 0 0 5vmin 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url(./images/signature_cocktails.jpeg);
-    background-size: cover;
-    background-position: 70% 70%;
-    position: relative;
-}
-.martinis-cocktails::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.martinis-cocktails h2 {z-index: 1;}
-
-.refreshing-sips {
-    height: 15vh;
-    width: 100%;
-    margin: 0 0 5vmin 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url(./images/refreshing_sips.jpg);
-    background-size: cover;
-    background-position: 70% 70%;
-    position: relative;
-}
-.refreshing-sips::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.refreshing-sips h2 {z-index: 1;}
-
-
-/* ------------------- START OF FOOTER ------------------- */
-
-footer {
-    width: 100%;
-    height: 40vmin;
-    background-color: var(--color-3);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--montserrat);
-    color: white;
-    font-size: 5px;
-}
-
-footer .footer-text {
-    height: 100%;
-    width: 40%;
-    border-left: 1px solid var(--color-3);
-    border-right: 1px solid var(--color-3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    z-index: 1;
-    font-size: 5px;
-    padding: 0;
-    margin: 0;
-}
+    justify-content: center;
+    align-items: center;
+    color: var(--color-4);
 
-footer .lists {
-    padding: 0;
-    margin: 0;
-}
+    .checkout-items {
+        width: 90%;
+        padding: 1rem;
+        border: var(--color-4) 1px solid;
+        
 
-/* _____ Media Queries _____ */
-@media all and (max-width:960px){
-    /* _____ Body _____ */
-    #menu h1 {
+        .item {
+            padding: 1rem 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            border-bottom: var(--color-4) 1px solid;
+
+            &:nth-of-type(1) {
+                border-top: var(--color-4) 1px solid;
+            }
+
+            .name {
+                display: flex;
+                
+                .bx {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 0.75rem;
+                }
+                p {
+                    text-align: left;
+                }
+            }
+            p {
+                font-family: var(--montserrat);
+                font-size: 1.8rem;
+                
+                @media (min-width: 481px) {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        @media (min-width: 769px) {
+            width: 80%;
+        }
+        @media (min-width: 1025px) {
+            width: 60%;
+        }
+        @media (min-width: 1201px) {
+            width: 40%;
+        }
+    }
+
+    h1 {
         height: fit-content;
         width: 100%;
-        font-size: 5rem;
+        font-size: 5.2rem;
         text-align: center;
         margin: 0 0 2vmin 0;
+
+        @media (max-width: 960px) {
+            font-size: 5rem;
+        }
     }
-    #menu h2 {
-        height: 10vh;
-        width: 100%;
-        margin: 0 0 0 0;
-        font-size: 3.6rem;
+    h2 {
+        margin: 0 0 2rem 0 ;
+        font-size: 4rem;
         text-align: center;
+
+        @media (max-width: 960px) {
+            font-size: 3.6rem;
+        }
     }
-    #menu h3 {
-        height: 100%;
-        width: 50%;
+    h3 {
         font-size: 2.4rem;
-        margin: 0;
-        display: inline;
+        text-align: center;
     }
     p {
         margin: 0;
         padding: 0;
-    }
-    
-    .menu-description {
-        width: 75%;
         text-align: center;
-        text-wrap: wrap;
-        font-size: 1.8rem;
-        margin-bottom: 2%;
     }
-    
-    .item-container {
-        height: fit-content;
-        width: 70%;
-        margin: 0 15% 7.5vmin 15%;
-        position: relative;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    .item1 {
-        height: fit-content;
-        width: 100%;
-        margin: 0 0 5vmin 0;
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .item2 {
-        height: fit-content;
-        width: 100%;
-        margin: 0 0 5vmin 0;
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .item-none1 {
-        height: fit-content;
-        width: 40%;
-        margin: 0 0 5vmin 0;
-        position: relative;
-        display: none;
-        flex-wrap: wrap;
-        opacity: 0;
-    }
-    .item-none2 {
-        height: fit-content;
-        width: 40%;
-        margin: 0 0 5vmin 0;
-        position: relative;
-        display: none;
-        flex-wrap: wrap;
-        opacity: 0;
-    }
-    
-    
-    .item-heading {
-        height: fit-content;
-        width: 100%;
-        margin: 0 0 0.5vmin 0;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .price-underline {
-        height: 100%;
-        width: 49.5%;
-        display: inline;
-        top: 69%;
-        left: 2.5%;
-    }
-    .price {
-        height: fit-content;
-        width: fit-content;
-        font-size: 3rem;
-        position: relative;
-        top: 10%;
-        left: 70%;
-    }
-    .price2 {
-        height: fit-content;
-        width: fit-content;
-        font-size: 3rem;
-        position: relative;
-        top: 10%;
-        left: 60%;
-    }
-    .price-line1 {
-        height: 0;
-        width: 50%;
-        position: relative;
-        bottom: 5px;
-        border: 0.1vmin solid #BC905F;
-    }
-    .price-line2 {
-        height: 0;
-        width: 100%;
-        position: relative;
-        border: 0.1vmin solid #BC905F;
-    }
-    .description {
-        height: 62.5%;
-        width: 100%;
-        position: relative;
-        text-wrap: wrap;
-        font-size: 1em;
+    a {
+        color: var(--color-5);
     }
 }

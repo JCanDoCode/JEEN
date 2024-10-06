@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeen</title>
+    <link rel="stylesheet" href="./checkout.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Josel Canlas -->
+
+    <div class="sidebar">
+        <div class="exit">
+            <i class='bx bx-x sidebar-exit'></i>
+        </div>
+        <div class="sidebar-container">
+            <h1>Reservation</h1>
+            <div class="forms">
+                <div class="form-field">
+                    <h3>Name:</h3>
+                    <input placeholder="Your Name" type="text">
+                </div>
+                <div class="form-field">
+                    <h3>Email:</h3>
+                    <input placeholder="Your Email" type="text">
+                </div>
+                <div class="form-field">
+                    <h3>Phone #:</h3>
+                    <input placeholder="Your Phone #" type="text">
+                </div>
+                <div class="form-field">
+                    <h3>Date:</h3>
+                    <input type="date">
+                </div>
+                <div class="form-field">
+                    <h3>Time:</h3>
+                    <input type="time">
+                </div>
+                <div class="form-field">
+                    <h3>Party Size:</h3>
+                    <select name="" id="">
+                        <option value="1">1 Person</option>
+                        <option value="2">2 Person</option>
+                        <option value="3">3 Person</option>
+                        <option value="4">4 Person</option>
+                        <option value="5">5 Person</option>
+                        <option value="6">6 Person</option>
+                        <option value="6+">6+ Person</option>
+                    </select>
+                </div>
+            </div>
+            <input id="submit" type="submit">
+        </div>
+    </div>
+
+    <p class="item-count" id="itemCount"></p>
+    <a href="./checkout.html" class="shopping-bag"><i class='bx bx-shopping-bag'></i></a>
+    
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <div id="logo">
+                    <img src="./images/Jeen-Logo.png" alt="">
+                </div>
+                <div class="menu">
+                    <ul class="menu-list">      
+                        <li>
+                            <a href="./index.html" class="nav-links">Home</a>
+                        </li>
+                        <li>
+                            <a href="./about.html" class="nav-links">About</a>
+                        </li>
+                        <li>
+                            <a href="./menu.html" class="nav-links">Menu</a>
+                        </li>
+                        <li>
+                            <a href="./contactus.html" class="nav-links">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-burger">
+                    <h1 class="the-r">R</h1>
+                    <div id="burger">
+                        <div class="lines"></div>
+                        <div class="lines"></div>
+                        <div class="lines"></div>
+                        <div class="lines"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <h1>Checkout</h1>
+        <div class="checkout-items" id="checkoutItems">
+            
+        </div>
+    </section>
+    <script type="module" src="./js/checkout.js"></script>
+    <script>
+        const exitButton = document.querySelector(".sidebar-exit"),
+              openButton = document.querySelector("#burger"),
+              sidebar = document.querySelector(".sidebar");
+
+        exitButton.addEventListener("click", () => {
+            sidebar.classList.remove("open");
+            sidebar.classList.toggle("close");
+        })
+
+        openButton.addEventListener("click", () => {
+            sidebar.classList.remove("close");
+            sidebar.classList.toggle("open");
+        })
+    </script>
+</body>
+</html>
