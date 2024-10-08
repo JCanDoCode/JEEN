@@ -4,6 +4,8 @@ const addBtn = document.querySelectorAll(".add-btn");
 const itemCount = document.querySelector("#itemCount");
 const checkoutItemDiv = document.querySelector("#checkoutItems");
 document.addEventListener("click", (event) => {
+    // the event.target is what element the user clicks on
+    // checks if what the user clicked has the delete-btn class.
     if (event.target.classList.contains("delete-btn")) {
         const itemIndex = event.target.dataset.index;
         deleteItem(itemIndex);
@@ -62,6 +64,9 @@ const loadItems = () => {
         totalNum.innerHTML = "$" + total.toFixed(2);
     } else {
         checkoutItemDiv.innerHTML = `<h3>No items in bag</h3><p><a href="./menu.html">Click here</a> to view our menu</p>`;
+        subTotalNum.innerHTML = "$0";
+        taxNum.innerHTML = "$0";
+        totalNum.innerHTML = "$0";
     }
 }
 const deleteItem = (index) => {
@@ -86,10 +91,6 @@ const clearItems = (index) => {
 
 window.addEventListener("load", loadItems);
 window.addEventListener("load", () => {(localStorage.getItem("itemNum")) ? updateItemAmount() : initialization()});
-// deleteBtn.forEach(btn => {
-//     const itemIndex = btn.dataset.index;
-//     btn.addEventListener("click", () => deleteItem(itemIndex));
-// });
 addBtn.forEach(btn => {
     const itemName = btn.dataset.item;
     btn.addEventListener("click", () => addItem(itemName));
