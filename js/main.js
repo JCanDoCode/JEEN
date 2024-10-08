@@ -30,5 +30,5 @@ const addItem = (item) => {
 window.addEventListener("load", () => {(localStorage.getItem("itemNum")) ? updateItemAmount() : initialization()});
 addBtn.forEach(btn => {
     const itemName = btn.dataset.item;
-    btn.addEventListener("click", () => {addItem(itemName)});
+    btn.addEventListener("click", () => addItem(itemName));
 });

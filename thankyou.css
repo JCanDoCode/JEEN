@@ -586,22 +586,6 @@ section {
             width: 40%;
         }
     }
-    .btn {
-        cursor: pointer;
-        display: block;
-        margin-top: 1rem;
-        border: var(--color-4) 2px solid;
-        border-radius: 1.5rem;
-        text-decoration: none;
-        text-align: center;
-        color: var(--color-4);
-        transition: all 0.5s ease;
-
-        &:hover {
-            background-color: var(--color-4);
-            color: var(--color-1);
-        }
-    }
 
     h1 {
         height: fit-content;

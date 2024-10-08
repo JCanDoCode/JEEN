@@ -3,7 +3,19 @@ import items from "./items.js";
 const addBtn = document.querySelectorAll(".add-btn");
 const itemCount = document.querySelector("#itemCount");
 const checkoutItemDiv = document.querySelector("#checkoutItems");
-const deleteBtn = document.querySelectorAll(".delete-btn");
+document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("delete-btn")) {
+        const itemIndex = event.target.dataset.index;
+        deleteItem(itemIndex);
+    }
+});
+const subTotalNum = document.querySelector("#subTotalNum");
+const taxNum = document.querySelector("#taxNum");
+const totalNum = document.querySelector("#totalNum");
+const orderBtn = document.querySelector("#orderBtn");
+const tax = 0.05;
+let taxAmount = 0;
+let total = 0;
 
 const initialization = () => {
     localStorage.setItem("itemNum", 0);
@@ -29,25 +41,57 @@ const addItem = (item) => {
     updateItemAmount();
 }
 const loadItems = () => {
-    if (localStorage.getItem("bagItems")) {
+    if (localStorage.getItem("itemNum") >= 1) {
         let bagItems = JSON.parse(localStorage.getItem("bagItems"));
-        bagItems.forEach(item => {
-            checkoutItemDiv.innerHTML += `<div class="item">
+        checkoutItemDiv.innerHTML = "";
+        let subTotal = 0;
+        bagItems.forEach((item, index) => {
+            checkoutItemDiv.innerHTML += `<div class="item" id="` + index + `">
                                             <div class="name">
-                                                <i class='bx bx-trash-alt delete-btn'></i>
+                                                <i class='bx bx-trash-alt delete-btn' data-index="` + index + `"></i>
                                                 <p>` + item.name + `</p>
                                             </div>
-                                            <p>` + item.price + `</p>
+                                            <p>$` + item.price + `</p>
                                         </div>`;
+            subTotal += item.price;
+            subTotalNum.innerHTML = "$" + subTotal.toFixed(2);
         });
+        taxAmount = subTotal * tax;
+        taxNum.innerHTML = "$" + taxAmount.toFixed(2);
+        total = subTotal + taxAmount;
+        totalNum.innerHTML = "$" + total.toFixed(2);
     } else {
-        checkoutItemDiv.innerHTML = `<h3>No items in bag</h3><p><a href="./menu.html">Click here</a> to view our menu</p>`
+        checkoutItemDiv.innerHTML = `<h3>No items in bag</h3><p><a href="./menu.html">Click here</a> to view our menu</p>`;
     }
 }
+const deleteItem = (index) => {
+    let bagItems = JSON.parse(localStorage.getItem("bagItems"));
+    bagItems.splice(index, 1);
+    console.log(bagItems);
+    localStorage.setItem("bagItems", JSON.stringify(bagItems));
+    let itemNum = JSON.parse(localStorage.getItem("itemNum"));
+    itemNum--;
+    localStorage.setItem("itemNum", itemNum);
+    loadItems();
+    updateItemAmount();
+}
+const clearItems = (index) => {
+    let bagItems = JSON.parse(localStorage.getItem("bagItems"));
+    bagItems = [];
+    localStorage.setItem("bagItems", JSON.stringify(bagItems));
+    let itemNum = JSON.parse(localStorage.getItem("itemNum"));
+    itemNum = 0;
+    localStorage.setItem("itemNum", itemNum);
+}
 
-window.addEventListener("load", loadItems)
+window.addEventListener("load", loadItems);
 window.addEventListener("load", () => {(localStorage.getItem("itemNum")) ? updateItemAmount() : initialization()});
+// deleteBtn.forEach(btn => {
+//     const itemIndex = btn.dataset.index;
+//     btn.addEventListener("click", () => deleteItem(itemIndex));
+// });
 addBtn.forEach(btn => {
     const itemName = btn.dataset.item;
-    btn.addEventListener("click", () => {addItem(itemName)});
+    btn.addEventListener("click", () => addItem(itemName));
 });
+orderBtn.addEventListener("click", clearItems)
