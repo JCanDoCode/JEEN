@@ -503,10 +503,7 @@ header .lines:nth-child(4) {
 /* Body */
 section {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
     color: var(--color-4);
 
     .checkout-items {
